@@ -1,14 +1,12 @@
-# Foo Parameterization
-
-This repository contains software and supporting materials for the complex yet ficticious Foo parameterization for
-atmosphereic sea-spray physics.  Currently, the code simply calculates the volume of a sphere given a user-supplied
+This repository contains a software package and supporting materials for the complex yet ficticious Foo parameterization for
+atmosphereic sea-spray physics.  Currently, the code simply calculates the volume of a sphere from a user-supplied
 radius.
 
 The main software to perform this calculation is contained within the `foo_parameterization` module.
 
 ## Installation
 
-The software is intended to run in a Python 3 environment, however it has only been tested with Python 3.9 specifically.
+The software is intended to operate in a Python 3 environment, however it has only been tested with Python 3.9 specifically.
 
 To install the `foo_parameterization` package, simply run:
 
@@ -18,8 +16,7 @@ pip install foo_parameterization
 
 This should install the package and any necessary dependencies.
 
-Another option for installing the package and necessary dependencies is using `conda`.  More information about `conda` and how to
-acquire/install it can be found here:
+Another option for installing is using `conda`.  More information about `conda` and how to acquire/install it can be found here:
 
 - [Miniconda](https://conda.io/miniconda.html) or
 - [Anaconda](https://www.continuum.io/downloads)
@@ -28,17 +25,12 @@ With `conda` installed, users can install the environment by running:
 
 ```
 conda env create -f environment.yml
-```
-
-and then install the package with:
-
-```
-python setup.py [install|develop]
+conda activate foo-env
 ```
 
 ## Usage
 
-To run the software from the command line, do:
+To run the software from the command line:
 
 ```
 python foo_parameterization.py -r <radius>
@@ -46,7 +38,7 @@ python foo_parameterization.py -r <radius>
 
 where `<radius>` is the radius from which to calculate the volume of a sphere.
 
-To run the software from within a python environment, do:
+To run the software from within a python environment:
 
 ```python
 from foo_parameterization import foo_parameterization

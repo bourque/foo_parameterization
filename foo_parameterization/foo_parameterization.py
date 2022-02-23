@@ -28,23 +28,6 @@ Use
     This module may be imported by other modules/packages as such:
 
         import foo_parameterization
-
-Notes
------
-
-    There are some potential improvements that could be made to this
-    code, namely:
-        - User-supplied parameters could be stored and read in via a
-          file (e.g. a JSON file).  This could be handy if there are
-          to be many parameters used in future calculations.  It could
-          also help the user save parameters used in previous runs of
-          the code.
-        - The code could make use of inheritance if the Foo et al.
-          parameterization is only one of several parameterizations
-          that could be used for atmospheric sea-spray physics modeling
-        - Currently the code simple prints the results of the
-          calculation to the screen, but it would be more useful to
-          store and/or plot the results perhaps.
 """
 
 import argparse
