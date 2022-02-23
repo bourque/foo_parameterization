@@ -1,6 +1,9 @@
 """Calculate the Foo et al. parameterization for atmospheric sea-spray
 physics
 
+Currently this module simply calculates the volume of a sphere from a
+user-supplied radius.
+
 Authors
 -------
     - Matthew Bourque
@@ -8,8 +11,23 @@ Authors
 Use
 ---
 
-Dependencies
-------------
+    This module can be executed via the command line as such:
+
+        python foo_parameterization.py -r <radius>
+
+    where <radius> is the radius of a sphere from which to calculate
+    the volume.
+
+    The user may also perform the calculate from within a python
+    environment, e.g.:
+
+        from foo_parameterization import foo_parameterization
+        foo = foo_parameterization.FooParameterization()
+        result = foo.calculate(1.0)
+
+    This module may be imported by other modules/packages as such:
+
+        import foo_parameterization
 """
 
 import argparse
