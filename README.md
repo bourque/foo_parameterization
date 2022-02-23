@@ -1,11 +1,12 @@
 # Foo Parameterization
 
 This repository contains software and supporting materials for the complex yet ficticious Foo parameterization for
-atmosphereic sea-spray physics.
+atmosphereic sea-spray physics.  Currently, the code simply calculates the volume of a sphere given a user-supplied
+radius.
 
 The main software to perform this calculation is contained within the `foo_parameterization` module.
 
-## Installation and Usage
+## Installation
 
 The software is intended to run in a Python 3 environment, however it has only been tested with Python 3.9 specifically.
 
@@ -13,12 +14,11 @@ To install the `foo_parameterization` package, simply run:
 
 ```
 pip install foo_parameterization
-
 ```
 
 This should install the package and any necessary dependencies.
 
-Another option for installing the necessary dependencies is using `conda`.  More information about `conda` and how to
+Another option for installing the package and necessary dependencies is using `conda`.  More information about `conda` and how to
 acquire/install it can be found here:
 
 - [Miniconda](https://conda.io/miniconda.html) or
@@ -30,7 +30,15 @@ With `conda` installed, users can install the environment by running:
 conda env create -f environment.yml
 ```
 
-To run the software from the command line, run:
+and then install the package with:
+
+```
+python setup.py [install|develop]
+```
+
+## Usage
+
+To run the software from the command line, do:
 
 ```
 python foo_parameterization.py -r <radius>
@@ -38,7 +46,7 @@ python foo_parameterization.py -r <radius>
 
 where `<radius>` is the radius from which to calculate the volume of a sphere.
 
-To run the software from within a python environment:
+To run the software from within a python environment, do:
 
 ```python
 from foo_parameterization import foo_parameterization
