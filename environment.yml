@@ -1,0 +1,29 @@
+# This file describes a conda environment that can be to install foo_parameterization
+#
+# Run the following command to set up this environment:
+# $ conda env create -f environment.yml
+#
+# The environment name can be overridden with the following command:
+# $ conda env create -n <custom name> -f environment.yml
+#
+# Run the following command to activate the environment:
+# $ source activate foo-env
+#
+# To deactivate the environment run the following command:
+# $ source deactivate
+#
+# To remove the environment entirely, run the following command:
+# $ conda env remove -n foo-env
+
+name: foo-env
+
+channels:
+  - defaults
+
+dependencies:
+  - pip=21.2.4
+  - pytest=6.2.5
+  - python=3.9.7
+  - pip:
+    # Current package
+    - -e .
