@@ -11,7 +11,7 @@ jobs:
     strategy:
       max-parallel: 5
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest]
         python-version: [3.9]
 
     steps:
@@ -35,12 +35,12 @@ jobs:
           echo " "
           echo "Installing foo_parameterization package"
           echo " "
-          python setup.py develop
+          sudo python setup.py develop
 
           echo " "
           echo "Testing package installation"
           echo " "
-          python -c "import foo_parameterization; print('Version: ' + foo_parameterization.__version__); print('Path: ' + foo_parameterization.__path__[0])"
+          python -c "import foo_parameterization; print('Path: ' + foo_parameterization.__path__[0])"
 
           echo " "
           echo "The conda environment being used:"
